@@ -4,16 +4,14 @@ import java.util.Scanner;
 
 public class JavaStdinII {
     public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
-        int i = scan.nextInt();
-        double d = scan.nextDouble();
-        String s =scan.nextLine();
-        s= scan.nextLine();
+        Scanner input = new Scanner(System.in);
+        int a,b,c;
+        a=input.nextInt();
+        b=input.nextInt();
+        c=input.nextInt();
 
-        // Write your code here.
-
-        System.out.println("String: " + s);
-        System.out.println("Double: " + d);
-        System.out.println("Int: " + i);
+        System.out.println(a);
+        System.out.println(b);
+        System.out.println(c);
     }
 }
