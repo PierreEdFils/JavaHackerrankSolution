@@ -23,20 +23,7 @@ class Student{
 }
 
 //Complete the code
-class CGPAComparator implements Comparator<Student> {
-    public int compare(Student s1, Student s2) {
-        if (s1.getCgpa() != s2.getCgpa()) {
-            // Sort by decreasing CGPA
-            return Double.compare(s2.getCgpa(), s1.getCgpa());
-        } else if (!s1.getFname().equals(s2.getFname())) {
-            // Sort alphabetically by name if CGPAs are equal
-            return s1.getFname().compareTo(s2.getFname());
-        } else {
-            // Sort by ID if names and CGPAs are equal
-            return Integer.compare(s1.getId(), s2.getId());
-        }
-    }
-}
+
 public class JavaSort {
     public static void main(String[] args){
         Scanner in = new Scanner(System.in);
@@ -53,6 +40,19 @@ public class JavaSort {
 
             testCases--;
         }
+        Collections.sort(studentList,new Comparator<Student>(){
+            public int compare(Student a,Student b){
+                if(a.getCgpa()!=b.getCgpa()){
+                    return Double.compare(b.getCgpa(),a.getCgpa());
+                }else{
+                    if(!a.getFname().equals(b.getFname())){
+                        return a.getFname().compareTo(b.getFname());
+                    }else{
+                        return a.getId()-b.getId();
+                    }
+                }
+            }
+        });
 
         for(Student st: studentList){
             System.out.println(st.getFname());
