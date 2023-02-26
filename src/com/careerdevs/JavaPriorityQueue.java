@@ -3,10 +3,11 @@ package com.careerdevs;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
+import java.util.Scanner;
 import java.util.stream.Collectors;
 
 public class JavaPriorityQueue {
-    class Student {
+    static class Student {
         int id;
         String name;
         double cgpa;
@@ -28,7 +29,7 @@ public class JavaPriorityQueue {
         }
     }
 
-    class Priorities {
+    static class Priorities {
         public List<Student> getStudents(List<String> events) {
             List<Student> studentlist = new ArrayList<Student>();
 
@@ -36,7 +37,7 @@ public class JavaPriorityQueue {
                 String[] temp = event.split(" ");
 
                 if(temp[0].equals("ENTER")) {
-                    Student student = new Student(Integer.parseInt(temp[3]), temp[1],                        Double.parseDouble(temp[2]));
+                    Student student = new Student(Integer.parseInt(temp[3]), temp[1], Double.parseDouble(temp[2]));
                     studentlist.add(student);
                 } else if(temp[0].equals("SERVED")) {
                     if(!studentlist.isEmpty()) {
