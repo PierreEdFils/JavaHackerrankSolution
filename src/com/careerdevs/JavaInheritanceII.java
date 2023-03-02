@@ -1,21 +1,14 @@
 package com.careerdevs;
-import java.io.*;
-import java.util.*;
-import java.text.*;
-import java.math.*;
-import java.util.regex.*;
 
-class  Arithmetic1{
+class Arithmetic{
+
+};
+class Adder extends Arithmetic{
     public int add(int a, int b){
         return a+b;
     };
 };
-
-class Adder1 extends Arithmetic {
-
-}
-
-public class JavaInheritance {
+public class JavaInheritanceII {
     public static void main(String []args){
         // Create a new Adder object
         Adder a = new Adder();
@@ -27,5 +20,3 @@ public class JavaInheritance {
         System.out.print(a.add(10,32) + " " + a.add(10,3) + " " + a.add(10,10) + "\n");
     }
 }
-
-
