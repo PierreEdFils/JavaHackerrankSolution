@@ -18,7 +18,7 @@ class MyCalculator implements AdvancedArithmetic {
 }
 public class JavaInterfaceI {
     public static void main(String []args){
-        MyCalculator my_calculator = new MyCalculator();
+        MyCalculator1 my_calculator = new MyCalculator1();
         System.out.print("I implemented: ");
         JavaInterface.ImplementedInterfaceNames(my_calculator);
         Scanner sc = new Scanner(System.in);

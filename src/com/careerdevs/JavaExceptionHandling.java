@@ -17,7 +17,7 @@ class MyCalculator1 {
     }
 }
 public class JavaExceptionHandling {
-    public static final MyCalculator my_calculator = new MyCalculator();
+    public static final MyCalculator1 my_calculator = new MyCalculator1();
     public static final Scanner in = new Scanner(System.in);
 
     public static void main(String[] args) {
